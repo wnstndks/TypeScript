@@ -42,4 +42,13 @@ class User{
 }
 
 
+let myinfo ={
+    이름:'안준수',
+    나이: 26 ,
+    출생지역:'서울'
+}
+
+let myinfo2 ={
+    song:'fancy',
+}
 

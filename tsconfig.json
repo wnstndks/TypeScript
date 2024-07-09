@@ -1,3 +1,10 @@
+//target'은 타입스크립트파일을 어떤 버전의 자바스크립트로 바꿔줄지 정하는 부분입니다.
+// es5로 셋팅해놓으면 es5 버전 자바스크립트로 컴파일(변환) 해줍니다. 
+// 신버전을 원하면 es2016, esnext 이런 것도 입력할 수 있습니다. 
+// 'module'은 자바스크립트 파일간 import 문법을 구현할 때 어떤 문법을 쓸지 정하는 곳입니다.
+// commonjs는 require 문법
+// es2015, esnext는 import 문법을 사용합니다. 
+
 {
     "compilerOptions":{
         "target":"es5",

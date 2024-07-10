@@ -52,3 +52,27 @@ let myinfo2 ={
     song:'fancy',
 }
 
+let 회원들 :string[] = ['kim', 'park']
+
+let 내정보 : { age : number } = { age : 20 }
+
+let 이름2 : string = 'kim';
+이름2 = 30;
+
+// 숙련자들은 타입을 귀찮게 굳이 적지 않습니다.
+
+// 왜냐면 변수 생성시 타입스크립트가 타입을 자동으로 부여해주니까요. 
+
+let 이름="dkswnstn"
+let 나이=20
+let 출생지역 = "seoul"
+
+let project :{
+    member : string[],
+    days : number,
+    started : boolean,
+  } = {
+    member : ['kim', 'park'],
+    days : 30,
+    started : true,
+  }

@@ -76,3 +76,28 @@ let project :{
     days : 30,
     started : true,
   }
+
+
+  function 내함수(x){
+    return x * 2
+  }
+  내함수(2);  //이러면 4가 이 자리에 남음
+  내함수(4);  //이러면 8이 
+
+
+  function 내함수(x :number) :number { 
+    return x * 2 
+  } 
+
+  function 내함수(x :number) :void { 
+    return x * 2 //여기서 에러남 
+  } 
+  
+
+  function 자릿수세기(x :number | string){ 
+    return x + 1 
+  } 
+
+  function 내함수(x? :number) :number { 
+    return x * 2 
+  }  

@@ -50,3 +50,27 @@ function 결혼할수있나(x, y, z) {
     }
 }
 console.log(결혼할수있나(100, true, '상'));
+// type 이 하나로 확정되지 않았을 경우 Type Narrowing 써야함
+// 어떤 변수가 타입이 아직 불확실하다면 if문등으로 Narrowing 해줘야 조작가능
+function 함수이다(x) {
+    if (typeof x === 'number') {
+        return x + 1;
+    }
+    else {
+        return x + '1';
+    }
+}
+function 함수이다2(x) {
+    var array = [];
+    if (typeof x === 'number') {
+        array[0] = x;
+    } //else, else if 안쓰면 에러로 잡을수도 있어서 if문은 끝까지
+}
+// assertion문법 - 타입 덮어쓰기
+function 함수이다3(x) {
+    var array = [];
+    array[0] = x; //number타입됨 - if문필요없음
+    // assertion 문법의 용도 1. Narrowing 할때 사용 
+    // 2. 무슨 타입이 들어올지 100%확실할 때 사용
+    // 3. 남이 짠 코드 수정, 왜 타입에러가 나는지 모르겠을때만 비상용으로..
+}

@@ -50,6 +50,25 @@ let 버튼 = document.getElementById('button');
 }) 
 
 
+// 특정글자나 숫자만 가질수 있게 제한을 두는 타입 = literal type
+//  => 더욱 엄격한 실드
+
+
+function rock(a:'가위'|'바위'|'보'):('가위'|'바위'|'보')[]{
+  return ['가위','보']
+}
+
+var 자료={
+  name:'kim'
+} as const;
+
+// as const는 타입을 object의 value로 바꿔줌 => 타입을 kim으로 바꿔줌
+// object 안에 있는 모든 속성을 readonly로 바꿔줌 - 변경나면 에러나게
+
+function 내함수(a:'kim'){
+
+}
+내함수(자료.name)
 
 
 

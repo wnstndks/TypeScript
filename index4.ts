@@ -32,10 +32,22 @@ function 가위바위보함수(a:'가위'|'바위'|'보'):('가위'|'바위'|'�
 
 
 
+let 제목 = document.querySelector('#title');
+if (제목 != null) {
+  제목.innerHTML = '반갑소'
+}
 
 
+let 링크 = document.querySelector('#link');
+if (링크 instanceof HTMLAnchorElement) {
+  링크.href = 'https://kakao.com'  //잘됨
+}
 
 
+let 버튼 = document.getElementById('button');
+버튼?.addEventListener('click', function(){
+  console.log('안녕')
+}) 
 
 
 

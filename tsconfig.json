@@ -6,8 +6,9 @@
 // es2015, esnext는 import 문법을 사용합니다. 
 
 {
-    "compilerOptions":{
-        "target":"es5",
-        "module":"commonjs",
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "strictNullChecks": true
     }
-}
+} 

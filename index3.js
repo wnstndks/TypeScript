@@ -74,3 +74,26 @@ function 함수이다3(x) {
     // 2. 무슨 타입이 들어올지 100%확실할 때 사용
     // 3. 남이 짠 코드 수정, 왜 타입에러가 나는지 모르겠을때만 비상용으로..
 }
+var 동물; // 위의 타입들만 동물에 들어갈 수 있다 -> 타입키워드로 변수 만드는 것= type alias
+var 동물2 = { name: 'kim', age: 20 };
+// const 변수 특징 - 절대 바꿀수 없는 변수(재할당금지)
+var 출생지역2 = { region: 'seoul' };
+출생지역2.region = 'busan';
+var 여친 = {
+    name: '엠버'
+};
+var position = { x: 10, y: 20 };
+var position2 = { x: 10 };
+var 테스트용변수3 = {
+    size: 123,
+    position: [1, 2, 3]
+};
+var 테스트용변수4 = {
+    name: '하이',
+    phone: 123456
+};
+var 테스트용변수5 = {
+    name: '예스',
+    phone: 1234,
+    어른: true
+};

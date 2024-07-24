@@ -147,3 +147,4 @@ function 만들함수(a :string, func1 :함수타입1, func2 :함수타입2){
 
 
 
+

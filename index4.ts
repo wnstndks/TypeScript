@@ -84,13 +84,65 @@ let 회원정보 = {
 회원정보.plusOne(1);
 회원정보.changeName();
 
-type Member={
-  name:string,
-  age:number,
-  plusOne=(x:number)=>number,
+// type Member={
+//   name:string,
+//   age:number,
+//   plusOne=(x:number)=>number,
 
+// }
 
+type 함수타입=(a:string)=>number;
+// 이 함수타입은 return으로 number만 가져다 쓸수 있음
+
+// ()=>{return 10}
+
+// 함수 정의하는 다른방법
+let 함수2:함수타입=function(){
+  // 함수를 만들때 type alias를 가져다 쓰고 싶다면 변수에 담아서 사용
+  return  10
 }
+
+
+
+type 회원정보2={
+  name:'kim',
+  // object 안에 함수 만들수 있음 - object안 함수 타입지정은?
+  plusOne : ( x :number ) => number,
+    // 파라미터가 있는데 타입지정안하면 혼남,
+  changeName:()=>void
+}
+
+회원정보.plusOne(2)
+// object안에 함수가져다 쓰는 방법
+
+
+type CutType = (x :string) => string
+
+let cutZero :CutType = function (x){
+    let result = x.replace(/^0+/, "");
+    return result
+}
+function removeDash(x :string) :number{
+    let result = x.replace(/-/g, "");
+    return parseFloat(result)
+}
+// 콜백함수 - 함수 내에 함수
+
+
+type 함수타입1 = (a :string) => string;
+type 함수타입2 = (a :string) => number;
+
+function 만들함수(a :string, func1 :함수타입1, func2 :함수타입2){
+  let result = func1(a);
+  let result2 = func2(result);
+  console.log(result2)
+}
+만들함수('010-1111-2222', cutZero, removeDash)
+
+
+
+
+
 
 
 

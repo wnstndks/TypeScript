@@ -35,3 +35,31 @@ let 링크3 = document.querySelectorAll('.naver');
     a.href = 'https://kakao.com'
   }
 })
+
+
+class Person2 {
+  data = 0;
+}
+
+let john = new Person2();
+let kim = new Person2();
+
+console.log(john.data);
+console.log(kim.data); 
+
+class Person3 {
+  name;
+  age;
+  constructor (){
+    this.name = 'kim';
+    this.age = 20;
+  }
+}
+
+
+class Person4 {
+  
+  add(숫자){
+    console.log(숫자 + 1)
+  }
+}

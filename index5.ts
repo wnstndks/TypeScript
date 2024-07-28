@@ -63,3 +63,44 @@ class Person4 {
     console.log(숫자 + 1)
   }
 }
+
+
+interface Square { 
+  color :string, 
+  width :number, 
+} 
+
+let 네모 :Square = { color : 'red', width : 100 }
+
+interface Student {
+  name :string,
+}
+interface Teacher extends Student {
+  age :number
+}
+
+interface Animal2 { 
+  name :string 
+} 
+interface Cat extends Animal2 { 
+  legs :number 
+}
+
+interface Student {
+  name :string,
+}
+interface Teacher {
+  age :number
+}
+
+let 변수 :Student & Teacher = { name : 'kim', age : 90 }
+
+
+interface Animal { 
+  name :string 
+} 
+interface Dog { 
+  name :number
+} 
+
+let 변수 :Dog & Animal = { name : '멍멍' }

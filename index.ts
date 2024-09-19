@@ -116,23 +116,66 @@
 
 // 강의 2
 // 문제1 
-let user:string='kim';
-let age:unknown= undefined;
-let married:boolean = false;
-let 철수:(string|unknown|boolean)[] = [user,age,married];
+// let user:string='kim';
+// let age:unknown= undefined;
+// let married:boolean = false;
+// let 철수:(string|unknown|boolean)[] = [user,age,married];
+
+// // 문제2
+// let 학교 :{
+//     score : (number|boolean)[],
+//     teacher: string,
+//     friend: string | string[]
+// }= {
+//     score : [100,97,53],
+//     teacher: 'Phil',
+//     friend:'John'
+// }
+
+// 학교.score[4]=false;
+// 학교.friend=['Lee',학교.teacher]
+
+
+// 함수에 파라미터 자리에 타입지정
+// 괄호안의 파라미터 타입  뒤는 return 값의 타입
+// 함수에서 void 타입도 사용가능 - 어떤값을 return 할게 없을 때는 void라고 하면 됨
+// function 함수(x:number):number{
+//     return x*2
+// }
+// + 타입스크립트에서 함수 만들었으면 타입지정된 파라미터는 필수
+// 만약에 파라미터변수? 하면 파라미터를 안써도 되긴 하다
+// function 함수(x?:number):void{
+// }
+// x?number 는 x:number|undefined와 같은 뜻이다
+
+
+// 강의 3 문제1
+// function 이름함수(x?:string):void{
+//     if(x?.length==0){
+//         console.log('이름이 없습니다.')
+//     }
+//     else{
+//         console.log('안녕하세요 '+x)
+//     }
+// }
 
 // 문제2
-let 학교 :{
-    score : (number|boolean)[],
-    teacher: string,
-    friend: string | string[]
-}= {
-    score : [100,97,53],
-    teacher: 'Phil',
-    friend:'John'
-}
+// function 자릿수세기(x:string|number):number{
+//     return x.toString().length
+// }
 
-학교.score[4]=false;
-학교.friend=['Lee',학교.teacher]
+// 문제3
+// function 결혼가능확률(x:number,y:boolean,z:string):(void|number){
+//     let sum:number=0
+//     if(y){
+//         sum+=500
+//     }
+//     if (z=='상'){
+//         sum+=100
+//     }
+//     sum+=x
 
-
+//     if(sum>=600){
+//         return '결혼가능'
+//     }
+// }

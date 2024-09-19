@@ -67,3 +67,72 @@
 //     this.name=name
 //   }
 // }
+
+
+
+// Js문법 그대로 Ts에서 사용가능
+
+//  변수에 타입지정가능
+//  장점- 타입이 실수로 변경될 때 에러 내줌 => 변수에 실드씌우는 것
+// let 이름: string='kim';
+// let 나이: number = 50;
+// let 결혼했니: boolean = true;
+
+// array 자료형 - 타입지정
+// let 회원들: string[] = [ 'kim','park']
+
+// object자료형 - 타입지정
+// let 회원들 :{member1:string,member2:string} ={member1:'kim',member2:'park'}
+
+// 타입스크립트는 타입지정을 원래 자동으로 해줌 => 타입지정 문법 생략 가능하긴 함
+
+
+// 문제1
+// let 이름: string = '아무개';
+// let 나이: number = 20;
+// let 출생지: string = 'seoul';
+
+
+// 문제2
+// let 최애 :{name : string,song:string}= {name : '폴블랑코',song:'summer'}
+
+// 문제3
+// let project :{member:string[],days:number,started:boolean}= {
+//     member:['kim','park'],
+//     days:30,
+//     started:true,
+// }
+
+
+// 문자 - 타입지정을 할 때 or 기호쓰기 => union 타입
+// let 회원 : number| string =123;
+
+// let 회원들 : (string|number)[] = [1,'hi',123];
+// let 오브젝트 :{a:string|number}= {a:'123'};
+
+// unknown  => 타입실드 해제문법 -> 일반 자바스크립트 처럼 사용해야됨
+// let 이름 : any;
+// 타입스크립트는 정확한 자료형의 연산만 가능함 - 간단한 수학연산도 타입이 맞아야됨
+
+// 강의 2
+// 문제1 
+let user:string='kim';
+let age:unknown= undefined;
+let married:boolean = false;
+let 철수:(string|unknown|boolean)[] = [user,age,married];
+
+// 문제2
+let 학교 :{
+    score : (number|boolean)[],
+    teacher: string,
+    friend: string | string[]
+}= {
+    score : [100,97,53],
+    teacher: 'Phil',
+    friend:'John'
+}
+
+학교.score[4]=false;
+학교.friend=['Lee',학교.teacher]
+
+

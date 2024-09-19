@@ -1,1 +1,1 @@
-# Studying Typescript
+# Studying TypeScript

@@ -25,3 +25,31 @@ var 링크3 = document.querySelectorAll('.naver');
         a.href = 'https://kakao.com';
     }
 });
+var Person2 = /** @class */ (function () {
+    function Person2() {
+        this.data = 0;
+    }
+    return Person2;
+}());
+var john = new Person2();
+var kim = new Person2();
+console.log(john.data);
+console.log(kim.data);
+var Person3 = /** @class */ (function () {
+    function Person3() {
+        this.name = 'kim';
+        this.age = 20;
+    }
+    return Person3;
+}());
+var Person4 = /** @class */ (function () {
+    function Person4() {
+    }
+    Person4.prototype.add = function (숫자) {
+        console.log(숫자 + 1);
+    };
+    return Person4;
+}());
+var 네모 = { color: 'red', width: 100 };
+var 변수 = { name: 'kim', age: 90 };
+var 변수 = { name: '멍멍' };

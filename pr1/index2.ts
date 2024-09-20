@@ -42,4 +42,3 @@
 // }
 // 학교.score[4] = false;
 // 학교.friend = ['Lee' , 학교.teacher]
-

@@ -57,3 +57,46 @@
 // let 영희쌤={subject:['science','english']};
 // let 민수쌤={subject:['science','art','korean']};
 
+// type alias 만드는 법 - 영어대문자로, 그리고 뒤에 Type붙이기
+// type AnimalType = string|number|undefined;
+// let 동물:AnimalType;
+
+// const라는 변수 -> 절대 바꿀수가 없음 그러나 등호로 재할당만 막는 역할, const로 담은 object 수정은 바꿀수 있음
+// object 자료 수정 막는 법
+
+// type GirlfriendType ={
+//     readonly name?:string //readonly를 사용시 수정 불가능 -> 오류남
+// }
+
+// const 여친:GirlfriendType = {
+//     name:'엠버'
+//     // ?는 undefined가 들어올수 있다의 약자
+// }
+
+// 여친.name='유라';
+
+// type 변수는 union 타입으로 합치기 가능
+// type Name=string;
+// type Age=number;
+// type Person = Name|Age;
+
+// type PositionX = {x:number};
+// type PositionY = {y:number};
+
+// object 두개합치기
+// type Position = PositionX & PositionY;
+
+// type Alias 문제
+// type one ={name:'number'};
+// type two ={name:'number'};
+// type three = one &two;
+
+// 문제2
+// type Quest2Type = {color?:string,size:number,readonly position:number[]}
+
+// 문제3
+// type Quest3Type ={name:string,phone:number,email:string}
+
+// 문제4
+// type PlusType = {kidsoradults:boolean}
+// type Quest4Type=Quest3Type & PlusType;

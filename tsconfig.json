@@ -18,6 +18,8 @@
     "compilerOptions": {
         "target": "ES5",
         "module": "commonjs",
+
+        // null 타입이 들어올때 엄격히 체크해달라는 뜻
         "strictNullChecks": true
     }
 } 

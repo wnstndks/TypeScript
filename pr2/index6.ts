@@ -62,3 +62,53 @@
 // function 마이함수([...a]:(number|string|boolean)[]){
 //     console.log(a)   
 // }
+
+
+// Type narrowing
+// function 함수(a:string|undefined){
+//     if(a && typeof a==='string'){ 
+//         //&& 기호는 특수한 기능 => undefined 인지 아닌지도 한번에 narrowing 할수 있음
+//         // a undefined면 if문 실행 x
+//         // a가 string이면 실행 0
+
+//     }
+// }
+
+
+// type Fish = {swim:string}
+// type Bird = {fly:string}
+
+// function 함수(animal:Fish|Bird){
+//     if ('swim' in animal ){ //in 키워드로 object narrowing 가능 - 속성명 in 오브젝트자료 => 속성으로 오브젝트 자료 구분 가능
+//         animal.swim
+//     }
+// }
+
+// // 오브젝트 instanceof 부모class - class는 오브젝트 뽑는 기능
+// // object 두개가 비슷하면 부모 class 누군지 물어봐서 object narrowing 가능
+
+// let 날짜 = new Date()
+// if (날짜 instanceof Date){
+
+// }
+
+
+//object 타입이 둘다 비슷하게 생겼는데 narrowing 하는 법 
+// 비슷한 object 타입일경우 literal type 강제로 만들어두면 나중에 도움이 됨
+// ex 타입 Car의 wheel 이라는 속성에는 4개가 들어올수 있음
+// type Car={
+//     wheel :'4개',
+//     color:string
+// }
+// type Bike = {
+//     wheel :'2개',
+//     color:string
+// }
+
+// function 함수(x:Car|Bike){
+//     if (x.wheel=='4개'){ 
+//         console.log('x는 car 타입임');
+//     }
+// }
+// 비슷한 object 타입이 많다 -> 그러면 literal type 넣기
+

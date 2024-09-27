@@ -28,3 +28,50 @@
 //     throw new Error()
 // } // 나오면 이상하다는 것만 이해해주면 됨
 
+// class 많이 만들어서 개발하려면 public private protected static 키워드 이용
+
+
+// class User{
+//     // public 붙으면 모든 자식들이 이용가능 근데 있으나 없으나 상관없어서 public 키워드를 일부로 붙일필욘없음
+//     public name='kim';
+
+//     constructor(a){
+//         this.name=a
+//     }
+    
+//     public 함수(){
+
+//     }
+// }
+
+// let 유저1 = new User('park')
+// 유저1.name ='안녕'
+
+// class User{
+//     // private는 class안에서만 수정, 이용가능
+//     // 클래스 내에서만 수정하고 싶은거는 private 사용
+//     name:string;
+//     private familyName:string = 'kim';
+
+//     constructor(a){
+//         this.name=a + this.familyName;
+//     }
+
+//     이름변경함수(a){
+//         this.familyName =a;
+//     }
+    
+// }
+
+// // 함수 만들어서 속성 변경하기
+// let 유저1 = new User('park')
+// 유저1.이름변경함수('ㅗㅑ')
+
+class Person{
+    constructor(public name){
+        // public 쓰면 this.어쩌구 생략 가능
+    }
+}
+
+let 자식 = new Person('kim')
+console.log(자식)

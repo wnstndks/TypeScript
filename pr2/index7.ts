@@ -67,11 +67,136 @@
 // let 유저1 = new User('park')
 // 유저1.이름변경함수('ㅗㅑ')
 
-class Person{
-    constructor(public name){
-        // public 쓰면 this.어쩌구 생략 가능
+// class Person{
+//     constructor(public name){
+//         // public 쓰면 this.어쩌구 생략 가능
+//     }
+// }
+
+// let 자식 = new Person('kim')
+// console.log(자식)
+
+
+
+
+// classs가 여러개 필요시 복붙하는 문법
+// class User{
+//     x =10;
+// }
+
+// class NewUser extends User{
+//     // 여기에 User에 있던거 다 복붙
+// }
+
+// let 사람 = new NewUser();
+// console.log(사람)
+
+// private는 class{} 안에서만 사용 가능
+// class User{
+//     protected x =10; //마찬가지로 protected쓰면 class안에서만 사용 가능
+// }
+
+// class NewUser extends User{
+//     // 그러나 private과 달리 protected를 쓰면, 여기서 사용 가능
+//     doThis(){
+//         this.x=10;
+//     }
+//     // 클래스를 여러개 만들때 속성 공유 - protected
+// }
+
+// protected - extends 된 class는 사용가능, 자식들 사용불가능 - 클래스 여러개 만들때 굿
+// private - extends 된 class는 사용불가능, 자식들 사용불가능
+
+// class User{
+//     static x=10; //x는 없어짐 - > static 키워드 붙이면 부모 class에 직접 부여됨(+자식에게 안물려줌, extends 하면 잘 따라옴)
+//     y=20; 
+// }
+
+// let 자식 = new User();
+// // console.log(자식.x) -> 오류남
+// console.log(User.x)
+
+// class User{
+//     static skill = 'js'; 
+//     intro= User.skill+'전문가입니다'; // static 키워드 붙이면 this. 못씀
+// }
+
+// let 철수 = new User();
+// console.log(철수)
+
+// // skill 명 변경
+// User.skill='typescript'; //static 키워드이므로 바꿀수 있음
+
+// let 철수2 = new User();
+// console.log(철수)
+
+// protected, static 키워드 문제1
+// class User{
+//     private static x=10;
+//     public static y=20;
+//     protected z=30;
+// }
+
+// let 철수2 = new User();
+// console.log(철수2);
+
+// class newuser extends User{
+
+// }
+// let 철수 = new newuser();
+// console.log(철수);
+
+
+// 문제2
+class User{
+    private static x = 10;
+    public static y=20;
+
+    public static addOne(num:number){
+        User.x+=num;
+    }
+    public static printX(){
+        console.log(User.x);
     }
 }
 
-let 자식 = new Person('kim')
-console.log(자식)
+User.addOne(3);
+User.addOne(4);
+User.printX();
+
+// 문제3
+class Square{
+    public x;
+    public y;
+    public z;
+
+    constructor(x,y,z){
+        this.x=x;
+        this.y=y;
+        this.z=z;
+    }
+    
+
+    draw(){
+        const div= document.createElement('div');
+        div.style.width=`${this.x}px`;
+        div.style.height=`${this.y}px`;
+        div.style.backgroundColor=this.z;
+
+        // 랜덤한 위치에 배치
+        const randomX = Math.random() * window.innerWidth;
+        const randomY = Math.random() * window.innerHeight;
+        
+        div.style.left = `${randomX}px`;
+        div.style.top = `${randomY}px`;
+        
+        document.body.appendChild(div);
+
+    }
+}
+
+let 네모 = new Square(30,30,'red');
+네모.draw();
+네모.draw();
+네모.draw();
+네모.draw();

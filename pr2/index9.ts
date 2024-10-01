@@ -19,8 +19,8 @@
 // }
 
 // 문제2.
-import {함수타입} from './index8';
+// import {함수타입} from './index8';
 
-let 함수:함수타입=function(a){
-    console.log(a)
-}
+// let 함수:함수타입=function(a){
+//     console.log(a)
+// }

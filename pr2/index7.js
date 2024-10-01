@@ -107,45 +107,36 @@
 // let 철수 = new newuser();
 // console.log(철수);
 // 문제2
-var User = /** @class */ (function () {
-    function User() {
-    }
-    User.addOne = function (num) {
-        User.x += num;
-    };
-    User.printX = function () {
-        console.log(User.x);
-    };
-    User.x = 10;
-    User.y = 20;
-    return User;
-}());
-User.addOne(3);
-User.addOne(4);
-User.printX();
-// 문제3
-var Square = /** @class */ (function () {
-    function Square(x, y, z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-    }
-    Square.prototype.draw = function () {
-        var div = document.createElement('div');
-        div.style.width = "".concat(this.x, "px");
-        div.style.height = "".concat(this.y, "px");
-        div.style.backgroundColor = this.z;
-        // 랜덤한 위치에 배치
-        var randomX = Math.random() * window.innerWidth;
-        var randomY = Math.random() * window.innerHeight;
-        div.style.left = "".concat(randomX, "px");
-        div.style.top = "".concat(randomY, "px");
-        document.body.appendChild(div);
-    };
-    return Square;
-}());
-var 네모 = new Square(30, 30, 'red');
-네모.draw();
-네모.draw();
-네모.draw();
-네모.draw();
+// class User{
+//     private static x = 10;
+//     public static y=20;
+//     public static addOne(num:number){
+//         User.x+=num;
+//     }
+//     public static printX(){
+//         console.log(User.x);
+//     }
+// }
+// User.addOne(3);
+// User.addOne(4);
+// User.printX();
+// // 문제3
+// class Square {  
+//     constructor (public width :number, public height :number, public color :string){
+//     }
+//     draw(){
+//       let a = Math.random();
+//       let square = `<div style="position:relative; 
+//         top:${a * 400}px; 
+//         left:${a * 400}px; 
+//         width:${this.width}px; 
+//         height : ${this.height}px; 
+//         background:${this.color}"></div>`;
+//       document.body.insertAdjacentHTML( 'beforeend', square );
+//     }
+//   }
+// let 네모 = new Square(30,30,'red');
+// 네모.draw();
+// 네모.draw();
+// 네모.draw();
+// 네모.draw();

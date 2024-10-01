@@ -148,55 +148,40 @@
 
 
 // 문제2
-class User{
-    private static x = 10;
-    public static y=20;
+// class User{
+//     private static x = 10;
+//     public static y=20;
 
-    public static addOne(num:number){
-        User.x+=num;
-    }
-    public static printX(){
-        console.log(User.x);
-    }
-}
+//     public static addOne(num:number){
+//         User.x+=num;
+//     }
+//     public static printX(){
+//         console.log(User.x);
+//     }
+// }
 
-User.addOne(3);
-User.addOne(4);
-User.printX();
+// User.addOne(3);
+// User.addOne(4);
+// User.printX();
 
-// 문제3
-class Square{
-    public x;
-    public y;
-    public z;
+// // 문제3
+// class Square {  
+//     constructor (public width :number, public height :number, public color :string){
+//     }
+//     draw(){
+//       let a = Math.random();
+//       let square = `<div style="position:relative; 
+//         top:${a * 400}px; 
+//         left:${a * 400}px; 
+//         width:${this.width}px; 
+//         height : ${this.height}px; 
+//         background:${this.color}"></div>`;
+//       document.body.insertAdjacentHTML( 'beforeend', square );
+//     }
+//   }
 
-    constructor(x,y,z){
-        this.x=x;
-        this.y=y;
-        this.z=z;
-    }
-    
-
-    draw(){
-        const div= document.createElement('div');
-        div.style.width=`${this.x}px`;
-        div.style.height=`${this.y}px`;
-        div.style.backgroundColor=this.z;
-
-        // 랜덤한 위치에 배치
-        const randomX = Math.random() * window.innerWidth;
-        const randomY = Math.random() * window.innerHeight;
-        
-        div.style.left = `${randomX}px`;
-        div.style.top = `${randomY}px`;
-        
-        document.body.appendChild(div);
-
-    }
-}
-
-let 네모 = new Square(30,30,'red');
-네모.draw();
-네모.draw();
-네모.draw();
-네모.draw();
+// let 네모 = new Square(30,30,'red');
+// 네모.draw();
+// 네모.draw();
+// 네모.draw();
+// 네모.draw();

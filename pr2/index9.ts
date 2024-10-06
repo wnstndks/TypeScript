@@ -76,3 +76,14 @@
 //     return result;
 // }
 
+// import 해온것이 아니라 일단 에러가 띄움
+// 변수,함수 재정의 - declare
+// declare let a:number; // 어딘가에 분명 변수 a가 있으니 에러내지 말아달라라는 뜻
+
+// console.log(a+1);
+
+
+
+
+
+

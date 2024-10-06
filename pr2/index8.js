@@ -63,11 +63,11 @@
 // let result = 함수<Animal>(data)
 // console.log(result)
 // 문제3.
-var Person = /** @class */ (function () {
-    function Person(a) {
-        this.name = a;
-    }
-    return Person;
-}());
-var a = new Person('예');
-a.name;
+// class Person<MyType>{
+//     name;
+//     constructor(a:MyType){
+//         this.name=a
+//     }
+// }
+// let a = new Person<string>('예');
+// a.name;

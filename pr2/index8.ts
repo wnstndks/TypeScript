@@ -85,13 +85,13 @@
 // console.log(result)
 
 // 문제3.
-class Person<MyType>{
-    name;
+// class Person<MyType>{
+//     name;
 
-    constructor(a:MyType){
-        this.name=a
-    }
-}
+//     constructor(a:MyType){
+//         this.name=a
+//     }
+// }
 
-let a = new Person<string>('예');
-a.name;
+// let a = new Person<string>('예');
+// a.name;
